@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "urllib3>=2.2.3",
+    "xorq[datafusion,duckdb,examples,postgres,snowflake]>=0.2.2",
 ]
 
 [project.scripts]
