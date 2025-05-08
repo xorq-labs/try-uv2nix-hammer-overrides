@@ -157,10 +157,15 @@
         inherit pkgs;
       };
       apps.x86_64-linux = {
-        default = {
+        hello = {
           type = "app";
           program = "${self.packages.x86_64-linux.default}/bin/hello";
         };
+        ipython = {
+          type = "app";
+          program = "${virtualenv-all}/bin/ipython";
+        };
+        default = self.apps.x86_64-linux.ipython;
       };
       devShells.x86_64-linux = {
         inherit impureShell uv2nixShell;
